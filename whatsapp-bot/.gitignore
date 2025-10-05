@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# WhatsApp session data (private!)
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Chat history (private!)
+_chat.txt
+*.txt
+
+# Logs
+*.log
