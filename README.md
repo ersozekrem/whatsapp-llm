@@ -14,17 +14,18 @@ Automatically reply to WhatsApp messages using AI based on your conversation his
 
 ### Setup
 
-1. Install dependencies:
+**1. Install dependencies:**
 ```bash
 cd whatsapp-bot
 npm install
-Add your chat history file (_chat.txt) to the folder
+2. Add your chat history file (_chat.txt) to the folder
 
-Start the bot:
+3. Start the bot:
 
 bash
 node bot.js
-Scan QR code with WhatsApp (Settings → Linked Devices → Link a Device)
+4. Scan QR code with WhatsApp (Settings → Linked Devices → Link a Device)
+
 Features
 🤖 Automatically responds to incoming WhatsApp messages
 🧠 Uses AI to generate responses based on your chat history
@@ -37,11 +38,3 @@ Sends message + chat history to local Ollama AI
 Generates contextual response
 Automatically replies
 Note: Keep the terminal window open while bot is running. Press Ctrl+C to stop.
-
-## 📄 License
-
-MIT License - feel free to use and modify!
-
----
-
-Built with ❤️ using Python, Ollama, and Llama 3.2
