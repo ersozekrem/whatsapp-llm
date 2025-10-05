@@ -1,83 +1,42 @@
 markdown
-# WhatsApp Chat AI Assistant
+---
 
-Ask questions about your WhatsApp chat history using a local AI model. Everything runs on your computer - completely private and offline!
+## 🤖 WhatsApp Auto-Responder Bot
 
-## 🚀 Features
+Automatically reply to WhatsApp messages using AI based on your conversation history!
 
-- Chat with AI about your WhatsApp conversation history
-- 100% local and private - no data leaves your computer
-- Uses Ollama with Llama 3.2 model
-- Interactive Q&A interface
-- Works completely offline
+### Located in: `whatsapp-bot/`
 
-## 📋 Requirements
+### Requirements
+- Node.js 18+
+- Ollama running locally
+- WhatsApp account
 
-- Windows 11 (or Windows 10)
-- Python 3.11+
-- Ollama
-- At least 4GB free RAM
+### Setup
 
-## 🛠️ Installation
+1. Install dependencies:
+```bash
+cd whatsapp-bot
+npm install
+Add your chat history file (_chat.txt) to the folder
 
-### 1. Install Ollama
-Download and install from: https://ollama.ai/download
+Start the bot:
 
-### 2. Download AI Model
-ollama pull llama3.2
-
-text
-
-### 3. Install Python Package
-pip install ollama
-
-text
-
-## 📱 How to Use
-
-### 1. Export Your WhatsApp Chat
-- Open WhatsApp on your phone
-- Select a chat
-- Tap the contact/group name → Export Chat → Without Media
-- Transfer the `_chat.txt` file to your computer
-
-### 2. Run the Assistant
-python chat_assistant.py
-
-text
-
-### 3. Ask Questions!
-Example questions:
-- "What topics did we discuss?"
-- "When did we talk about [topic]?"
-- "Summarize this conversation"
-- "What contact information was shared?"
-
-Type `exit` to quit.
-
-## 📁 Project Files
-
-- `test_ollama.py` - Test Ollama connection
-- `read_chat.py` - Read and display WhatsApp chat
-- `chat_qa.py` - Basic Q&A with predefined question
-- `chat_assistant.py` - Interactive chat assistant (main script)
-
-## 🔒 Privacy
-
-Your WhatsApp chat data stays on YOUR computer. The AI model runs locally through Ollama. No data is sent to the internet.
-
-**Note:** Never commit your actual chat files (`_chat.txt`) to GitHub!
-
-## ⚙️ How It Works
-
-1. Reads your exported WhatsApp chat file
-2. Sends the chat history + your question to the local Ollama AI
-3. AI analyzes the conversation and provides answers
-4. Everything happens on your machine
-
-## 🤝 Contributing
-
-Feel free to fork and improve this project!
+bash
+node bot.js
+Scan QR code with WhatsApp (Settings → Linked Devices → Link a Device)
+Features
+🤖 Automatically responds to incoming WhatsApp messages
+🧠 Uses AI to generate responses based on your chat history
+🔒 Runs locally - completely private
+📱 Works with WhatsApp Web
+How It Works
+Bot connects to WhatsApp via whatsapp-web.js
+Listens for incoming messages
+Sends message + chat history to local Ollama AI
+Generates contextual response
+Automatically replies
+Note: Keep the terminal window open while bot is running. Press Ctrl+C to stop.
 
 ## 📄 License
 
