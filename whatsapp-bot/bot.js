@@ -3,6 +3,9 @@ const qrcode = require('qrcode-terminal');
 const ollama = require('ollama').default;
 const fs = require('fs');
 
+let botStartTime = Date.now();
+
+
 console.log('Starting WhatsApp AI Bot...\n');
 
 // Read chat history
@@ -59,6 +62,11 @@ Response:`;
 
 // Listen for messages
 client.on('message', async (message) => {
+    // Only process messages received after bot started
+    if (message.timestamp * 1000 < botStartTime) {
+        return;
+    }
+    
     console.log(`📩 Message from ${message.from}:`);
     console.log(`   "${message.body}"\n`);
     
