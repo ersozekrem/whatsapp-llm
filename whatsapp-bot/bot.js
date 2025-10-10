@@ -43,7 +43,12 @@ ${chatHistory}
 
 Someone named ${senderName} just sent you: "${messageText}"
 
-Based on your conversation history and the message, write a natural, friendly response. Keep it brief and conversational like a WhatsApp message.
+Rules:
+- Study the chat history to understand this person's communication patterns
+- Match their language style (if they switch languages, you can too)
+- Keep your response directly related to what they just said
+- Be brief and conversational like a real WhatsApp chat
+- Mirror their tone and energy level
 
 Response:`;
 
@@ -59,7 +64,6 @@ Response:`;
         return 'Sorry, I had trouble processing that message.';
     }
 }
-
 // Listen for messages
 client.on('message', async (message) => {
     // Only process messages received after bot started
